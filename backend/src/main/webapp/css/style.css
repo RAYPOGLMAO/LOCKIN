@@ -1,0 +1,108 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: #0f1419;
+    color: #e6edf3;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    border-bottom: 1px solid #263038;
+    background: #141b22;
+}
+
+.brand {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #4ade80;
+    text-decoration: none;
+}
+
+.account { display: flex; align-items: center; gap: 16px; }
+.account a { color: #93a4b3; }
+
+.auth-card {
+    width: min(420px, calc(100% - 32px));
+    margin: 10vh auto;
+    padding: 32px;
+    border: 1px solid #263038;
+    border-radius: 12px;
+    background: #141b22;
+}
+
+h1 { margin: 0; font-size: 32px; letter-spacing: 4px; color: #4ade80; }
+.subtitle { margin-top: 4px; color: #93a4b3; }
+h2 { margin: 0 0 16px; font-size: 18px; }
+
+form { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+label { font-size: 14px; color: #93a4b3; }
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #2f3b45;
+    border-radius: 6px;
+    background: #0f1419;
+    color: #e6edf3;
+}
+
+button {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 6px;
+    background: #22c55e;
+    color: #06210f;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button.secondary { background: #334155; color: #e6edf3; }
+button.danger { background: #7f1d1d; color: #fee2e2; }
+
+.footer-link { margin-top: 20px; text-align: center; color: #93a4b3; font-size: 14px; }
+.footer-link a { color: #4ade80; }
+
+.dashboard { width: min(760px, calc(100% - 32px)); margin: 32px auto; display: grid; gap: 24px; }
+
+.panel {
+    padding: 24px;
+    border: 1px solid #263038;
+    border-radius: 12px;
+    background: #141b22;
+}
+
+.add-form { flex-direction: row; gap: 8px; margin-top: 0; }
+.add-form input[name="name"] { flex: 2; }
+.add-form input[name="description"] { flex: 1; }
+.add-form button { white-space: nowrap; }
+
+.alert { padding: 12px; border-radius: 6px; margin-top: 16px; }
+.alert-error { background: #451a1a; color: #fecaca; }
+.alert-success { background: #143121; color: #bbf7d0; }
+.empty { color: #93a4b3; }
+
+.habit-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+
+.habit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 16px;
+    border: 1px solid #263038;
+    border-radius: 8px;
+}
+
+.habit.completed { opacity: 0.6; }
+.habit.completed strong { text-decoration: line-through; }
+.habit-info { display: flex; flex-direction: column; gap: 4px; }
+.habit-info span { color: #93a4b3; font-size: 14px; }
+.habit-actions { display: flex; gap: 8px; }
+.habit-actions form { margin: 0; }
